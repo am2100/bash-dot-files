@@ -1,0 +1,36 @@
+{
+  "globals": {
+    "configMap": false,
+    "pm": false,
+    "pm.model": false
+  },
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "extends": "airbnb",
+  "rules": {
+    "no-console": 0,
+    "no-var": 0,
+    "func-names": 0,
+    "space-before-function-paren": 0,
+    "space-before-blocks": 0,
+    "no-trailing-spaces": 1,
+    "strict": 0,
+    "quotes": 1,
+    "object-shorthand": 0,
+    "comma-dangle": ["error", "only-multiline"],
+    "padded-blocks": 1,
+    "one-var": 0,
+    "key-spacing": ["error", { "align": "colon"}],
+    "no-multi-spaces": "off",
+    "camelcase": "off",
+    "prefer-destructuring": 0,
+    "no-restricted-syntax": 0,
+    "no-prototype-builtins": 0,
+    "prefer-arrow-callback": 0,
+    "no-unused-vars": 0,
+    "no-unused-expressions": 0,
+    "prefer-template": 0
+  }
+}

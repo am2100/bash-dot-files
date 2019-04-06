@@ -1,0 +1,10 @@
+*~
+*.swp
+*.svg
+v01/svg/
+v01/working-files/
+v01/config/project.conf.js
+v01/js/app.data.js
+v01/artwork/
+v01/*
+pm/js/rt/*
