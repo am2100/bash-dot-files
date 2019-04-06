@@ -89,6 +89,7 @@ ALERT=${BWhite}${On_Red}      # Bold White on red background
 
 GR_FLAG=${BWhite}${On_Green}  # Bold White on green background
 YL_FLAG=${BBlack}${On_Yellow} # Bold Black on yellow background
+#YL_FLAG=${Black}${On_Yellow} # Bold Black on yellow background
 OR_FLAG=${BWhite}${On_Orange} # Bold White on orange background
 RD_FLAG=${BRed}${On_White}    # Bold Red on white background
 WT_FLAG=${BBlack}${On_White}  # Bold Black on white background
