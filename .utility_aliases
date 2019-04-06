@@ -1,0 +1,51 @@
+# --------------
+# startup script
+# --------------
+alias startup="$HOME/bin/startup.sh"
+
+# ------------------
+# PROJECTS DIRECTORY
+# ------------------
+PROJECTS=$HOME/Documents/ac
+
+#---------------
+# rsync aliases
+#---------------
+# alias rsyncup="rsync -aP --exclude-from "ignorelist" /home/jim/ /media/jim/53e7c093-9f9d-46d2-b5f7-a4124f6e4089/homedir-rsync-backups/jim/"
+alias rsyncup="rsync -aP --exclude-from=/home/jim/ignorelist /home/jim/ /media/jim/53e7c093-9f9d-46d2-b5f7-a4124f6e4089/home/"
+#alias rsyncdown="rsync -aP --exclude-from "ignorelist" /media/jim/53e7c093-9f9d-46d2-b5f7-a4124f6e4089/homedir-rsync-backups/jim/ /home/jim/"
+alias rsyncdown="rsync -aP --exclude-from=/media/jim/53e7c093-9f9d-46d2-b5f7-a4124f6e4089/home/jim/ignorelist /media/jim/53e7c093-9f9d-46d2-b5f7-a4124f6e4089/home/ /home/jim/"
+
+#-------------
+# open webpage
+#-------------
+alias vimcheat="firefox https://github.com/am2100/xjjz/wiki/Cheat-sheet:-Vim"
+alias clicheat="firefox https://github.com/am2100/xjjz/wiki/Cheat-sheet:-Linux-cli"
+alias tmuxcheat="firefox https://github.com/am2100/xjjz/wiki/Cheat-sheet:-tmux"
+alias gitcheat="firefox https://github.com/am2100/xjjz/wiki/Cheat-sheet:-Git"
+alias pmwiki="firefox https://github.com/am2100/project-monitor/wiki"
+
+#--------
+# Firefox
+#--------
+alias ff="firefox"
+alias ffnw="firefox -new-window"
+alias ffnt="firefox -new-tab"
+
+#--------------------
+# FF Project browsing
+#--------------------
+alias ffac="$HOME/Documents/ac/pm-tools/project-browsers/ac/ac-startup.sh"
+alias ffbasw="$HOME/Documents/ac/pm-tools/project-browsers/basw/basw-startup.sh"
+alias ffflrp2="$HOME/Documents/ac/pm-tools/project-browsers/flrp2/flrp2-startup.sh"
+alias ffhact="$HOME/Documents/ac/pm-tools/project-browsers/hact/hact-startup.sh"
+alias fficsp2="$HOME/Documents/ac/pm-tools/project-browsers/icsp2/icsp2-startup.sh"
+alias ffsop="$HOME/Documents/ac/pm-tools/project-browsers/sop/sop-startup.sh"
+alias ffjmp="$HOME/Documents/ac/pm-tools/project-browsers/jmp/jmp-startup.sh"
+
+#-------
+#Taiga project Lipsum
+#-------
+alias lipsum="cat ~/Documents/lipsum/lipsum.txt"
+
+echo "Loaded .utility_aliases"
