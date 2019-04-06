@@ -96,7 +96,7 @@ WT_FLAG=${BBlack}${On_White}  # Bold Black on white background
 
 UUB=${Blue}${On_Black}
 TRUNKS=${Green}${On_Black}
-GOKU=${Cyan}${On_Black}
+GOKU=${Orange}${On_Black}
 
 HOST_MACHINE=$(eval "echo \$${HOSTNAME^^}")
 
