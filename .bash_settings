@@ -1,0 +1,54 @@
+#-------------------------------------------------------------
+# Some settings
+#-------------------------------------------------------------
+
+# Don't want coredumps.
+ulimit -S -c 0      
+# Cause the status of terminated background jobs to be
+# reported immediately, rather than before printing the
+# next primary prompt.
+set -o notify
+# Prevent output redirection using '>' '>&' and '<>' from overwriting
+# existing files
+set -o noclobber
+# Stop Cmd+D from logging you out of the shell
+set -o ignoreeof    
+# use vi-style command line editing interface
+set -o vi
+
+# Enable options:
+shopt -s cdspell
+shopt -s cdable_vars
+shopt -s checkhash
+shopt -s checkwinsize
+shopt -s sourcepath
+shopt -s no_empty_cmd_completion
+shopt -s cmdhist
+shopt -s histappend histreedit histverify
+shopt -s extglob       # Necessary for programmable completion.
+
+# Disable options:
+shopt -u mailwarn
+unset MAILCHECK        # Don't want my shell to warn me of incoming mail.
+
+#----------------------------------------------
+# change umask to make directory sharing easier
+#----------------------------------------------
+umask 0002
+
+#---------------------------------------------------
+# Ignore duplicaates in command history and increase
+# history size to 1000 lines
+#---------------------------------------------------
+export HISTCONTROL=ignoredups
+export HISTSIZE=1000
+
+#-----------------------
+# Set vim to text editor
+#-----------------------
+export EDITOR=vim
+
+#-------------------------------
+# Set terminal to use 256 colors
+#-------------------------------
+[ -z "$TMUX" ] && export TERM=xterm-256color

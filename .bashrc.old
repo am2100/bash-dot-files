@@ -1,0 +1,162 @@
+#--------------------------------------
+# Load environment settings on startup
+#--------------------------------------
+source /etc/environment
+
+#-------------------
+# Personal Aliases
+#-------------------
+
+# Prevent accidentally clobbering files.
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+alias mkdir='mkdir -p'
+
+alias ..='cd ..'
+
+# Pretty-print of some PATH variables:
+alias path='echo -e ${PATH//:/\\n}'
+alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
+
+# Abbreviate useful history lookup
+alias hg='history | grep'
+
+# Put laptop to sleep
+alias sleep='sudo pm-suspend'
+
+#-------------------------------------------------------------
+# The 'ls' family (this assumes you use a recent GNU ls).
+#-------------------------------------------------------------
+# Add colors for filetype and  human-readable sizes by default on 'ls':
+alias ls='ls -1hB --color'
+alias lx='ls -lXB'         #  Sort by extension.
+alias lk='ls -lSr'         #  Sort by size, biggest last.
+alias lt='ls -tr'         #  Sort by date, most recent last.
+alias llt='ls -ltr'         #  Sort by date, most recent last.
+alias lc='ls -ltcr'        #  Sort by/show change time,most recent last.
+alias lu='ls -ltur'        #  Sort by/show access time,most recent last.
+
+# The ubiquitous 'll': directories first, with alphanumeric sorting:
+alias ll="ls -lv --group-directories-first"
+alias lm='ll |more'        #  Pipe through 'more'
+alias lr='ll -R'           #  Recursive ls.
+alias la='ll -A'           #  Show hidden files.
+alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
+
+
+#-------------------------------------------------------------
+# Tailoring 'less'
+#-------------------------------------------------------------
+
+alias more='less'
+export PAGER=less
+export LESSCHARSET='latin1'
+export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-'
+                # Use this if lesspipe.sh exists.
+#export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
+export LESS='-i -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
+:stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
+
+# LESS man page colors (makes Man pages more readable).
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+
+#-------------------------------------------------------------
+# cd aliases
+#-------------------------------------------------------------
+
+#alias cd..="cd .."
+#alias cd...="cd ../.."
+#alias cd....="cd ../../.."
+#alias cd.....="cd ../../../.."
+#alias cd......="cd ../../../../.."
+
+
+#-------------------------------------------------------------
+# make directory and cd into it
+#-------------------------------------------------------------
+
+function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\"";
+}
+
+#-------------------------------------------------------------
+# import project aliases from .project_aliases file
+# and .utility_aliases file
+#-------------------------------------------------------------
+
+if [ -f $HOME/.project_aliases ]; then
+      . $HOME/.project_aliases
+    fi
+
+if [ -f $HOME/.utility_aliases ]; then
+      . $HOME/.utility_aliases
+    fi
+
+#-------------------------------------------------------------
+# fancy PS1
+#-------------------------------------------------------------
+
+# ANSI color codes
+RS="\[\033[0m\]"    # reset
+HC="\[\033[1m\]"    # hicolor
+UL="\[\033[4m\]"    # underline
+INV="\[\033[7m\]"   # inverse background and foreground
+FBLK="\[\033[30m\]" # foreground black
+FRED="\[\033[31m\]" # foreground red
+FGRN="\[\033[32m\]" # foreground green
+FYEL="\[\033[33m\]" # foreground yellow
+FBLE="\[\033[34m\]" # foreground blue
+FMAG="\[\033[35m\]" # foreground magenta
+FCYN="\[\033[36m\]" # foreground cyan
+FWHT="\[\033[37m\]" # foreground white
+BBLK="\[\033[40m\]" # background black
+BRED="\[\033[41m\]" # background red
+BGRN="\[\033[42m\]" # background green
+BYEL="\[\033[43m\]" # background yellow
+BBLE="\[\033[44m\]" # background blue
+BMAG="\[\033[45m\]" # background magenta
+BCYN="\[\033[46m\]" # background cyan
+BWHT="\[\033[47m\]" # background white
+
+force_color_prompt=yes
+PS1="$HC${debian_chroot:+($debian_chroot)}\A\n$FGRN\u@\h:\w\n$ $RS"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+#export SDKMAN_DIR="/home/jim/.sdkman"
+#[[ -s "/home/jim/.sdkman/bin/sdkman-init.sh" ]] && source "/home/jim/.sdkman/bin/sdkman-init.sh"
+
+#----------------------------------------------
+# change umask to make directory sharing easier
+#----------------------------------------------
+umask 0002
+
+#---------------------------------------------------
+# Ignore duplicaates in command history and increase
+# history size to 1000 lines
+#---------------------------------------------------
+export HISTCONTROL=ignoredups
+export HISTSIZE=1000
+
+#-----------------------
+# Set vim to text editor
+#-----------------------
+export EDITOR=vim
+
+#-------------------------------
+# Set terminal to use 256 colors
+#-------------------------------
+[ -z "$TMUX" ] && export TERM=xterm-256color
+
+# ---------------------
+# Import PM config vars
+# ---------------------
+
+if [ -f $HOME/.pm_config ]; then
+      . $HOME/.pm_config
+    fi
