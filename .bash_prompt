@@ -6,7 +6,20 @@ DEBUG=false
 LOG_LEVEL=2
 
 # [MACHINE COLOUR CODE][CNX][SU][LOAD][TIME USER@HOST PWD] >
-# Current Format: [TIME USER@HOST PWD] >
+# 
+# MACHINE COLOUR CODE: Colours set in .bashrc
+#   TRUNKS
+#   UUB
+#   GOKU
+#
+# CNX:
+#
+#
+# SU:
+#
+#
+# LOAD:
+#
 # TIME:
 #    Green     == machine load is low
 #    Orange    == machine load is medium
@@ -168,7 +181,7 @@ fi
 # Prompt
 PROMPT_COMMAND="history -a"
 # Add machine colour code
-PS1="\[${On_Blue}\]  \[${NC}\]"
+PS1="\[${ON_HOST_MACHINE}\]  \[${NC}\]"
 # Add connection info
 if [ $CNX_LOG_LEVEL -ge $LOG_LEVEL ]; then
     PS1=${PS1}"\[${CNX}\] ${CNX_MSG} \[${NC}\]"

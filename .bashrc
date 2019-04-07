@@ -95,10 +95,14 @@ RD_FLAG=${BRed}${On_White}    # Bold Red on white background
 WT_FLAG=${BBlack}${On_White}  # Bold Black on white background
 
 UUB=${Blue}${On_Black}
+ON_UUB=${Black}${On_Blue}
 TRUNKS=${Green}${On_Black}
+ON_TRUNKS=${Black}${On_Green}
 GOKU=${Orange}${On_Black}
+ON_GOKU=${Black}${On_Orange}
 
 HOST_MACHINE=$(eval "echo \$${HOSTNAME^^}")
+ON_HOST_MACHINE=$(eval "echo \$ON_${HOSTNAME^^}")
 
 #-------------------------------------------------------------
 # MOTD
