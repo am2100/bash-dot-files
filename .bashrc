@@ -108,6 +108,8 @@ TRUNKS=${Green}${On_Black}
 ON_TRUNKS=${Black}${On_Green}
 GOKU=${Orange}${On_Black}
 ON_GOKU=${Black}${On_Orange}
+CLAYTON=${Lilac}${On_Black}
+ON_CLAYTON=${Black}${On_Lilac}
 
 HOST_MACHINE=$(eval "echo \$${HOSTNAME^^}")
 ON_HOST_MACHINE=$(eval "echo \$ON_${HOSTNAME^^}")
