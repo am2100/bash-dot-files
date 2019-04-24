@@ -20,6 +20,8 @@ alias hg='history | grep'
 
 alias o='xdg-open'
 
+alias cls='clear'
+
 #-------------------------------------------------------------
 # The 'ls' family (this assumes you use a recent GNU ls).
 #-------------------------------------------------------------
@@ -68,3 +70,9 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\"";
 }
+
+#-------------------------------------------------------------
+# shortcuts to key directories
+#-------------------------------------------------------------
+alias cdmmt='cd ~/Documents/mmt'
+
