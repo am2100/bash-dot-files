@@ -75,4 +75,5 @@ function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\"";
 # shortcuts to key directories
 #-------------------------------------------------------------
 alias cdmmt='cd ~/Documents/mmt'
-
+alias cdrepos='cd ~/Documents/repos'
+alias cdd='cd ~/Documents/mmt/daily-notes'
