@@ -131,3 +131,6 @@ autocmd FileType markdown colorscheme goodwolf
 
 " Don't show certain file types in netrw
 :let g:netrw_list_hide= '.*\.swp$,\~$,\.orig$'
+
+" Macros
+:let @d = '0lli~~jjA~~jjdd}P'
