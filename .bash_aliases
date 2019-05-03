@@ -77,3 +77,4 @@ function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\"";
 alias cdmmt='cd ~/Documents/mmt'
 alias cdrepos='cd ~/Documents/repos'
 alias cdd='cd ~/Documents/mmt/daily-notes'
+alias cdbooks='cd ~/Documents/books'
