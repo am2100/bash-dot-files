@@ -121,7 +121,9 @@ ON_HOST_MACHINE=$(eval "echo \$ON_${HOSTNAME^^}")
 echo -e "${HOST_MACHINE}${Bold} ${HOSTNAME^^}! ${HOST_MACHINE}\n\
  BASH ${BRed}${BASH_VERSION%.*}${HOST_MACHINE} DISPLAY ${BRed}$DISPLAY \n\
  ${HOST_MACHINE}$(df -Ph "$PWD" | \
-  awk 'END {print "Available disk space: " $4 " " "Used: " $5}') ${NC}\n"
+  awk 'END {print "Available disk space: " $4 " " "Used: " $5}') ${NC}\n
+ I am responsible for technical delivery on the Vodafone account.\n
+ That includes issues affecting QUALITY, AGILITY and TECHNICAL DIRECTION.\n"
 
 
 #-------------------------------------------------------------

@@ -79,3 +79,10 @@ alias cdrepos='cd ~/Documents/repos'
 alias cdd='cd ~/Documents/mmt/daily-notes'
 alias cdbooks='cd ~/Documents/books'
 alias cdperl='cd ~/Documents/projects/learn-perl'
+alias cdreport='cd ~/Documents/projects/auto-completion-reports'
+alias cdprojects='cd ~/Documents/projects'
+
+#-------------------------------------------------------------
+# realias
+#-------------------------------------------------------------
+alias realias='$EDITOR ~/.bash_aliases; source ~/.bash_aliases'
