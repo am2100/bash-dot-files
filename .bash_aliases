@@ -81,6 +81,7 @@ alias cdbooks='cd ~/Documents/books'
 alias cdperl='cd ~/Documents/projects/learn-perl'
 alias cdreport='cd ~/Documents/projects/auto-completion-reports'
 alias cdprojects='cd ~/Documents/projects'
+alias cdbash='cd ~/Documents/repos/bash-dot-files'
 
 #-------------------------------------------------------------
 # realias
