@@ -121,9 +121,7 @@ ON_HOST_MACHINE=$(eval "echo \$ON_${HOSTNAME^^}")
 echo -e "${HOST_MACHINE}${Bold} ${HOSTNAME^^}! ${HOST_MACHINE}\n\
  BASH ${BRed}${BASH_VERSION%.*}${HOST_MACHINE} DISPLAY ${BRed}$DISPLAY \n\
  ${HOST_MACHINE}$(df -Ph "$PWD" | \
-  awk 'END {print "Available disk space: " $4 " " "Used: " $5}') ${NC}\n
- I am responsible for technical delivery on the Vodafone account.\n
- That includes issues affecting QUALITY, AGILITY and TECHNICAL DIRECTION.\n"
+  awk 'END {print "Available disk space: " $4 " " "Used: " $5}') ${NC}\n"
 
 
 #-------------------------------------------------------------
@@ -138,6 +136,25 @@ fi
 # Add bin/ to path
 # ----------------
 PATH=$PATH:/home/jim/bin
+
+#---------------------
+# Add snap/bin to path
+#---------------------
+PATH=$PATH:/snap/bin
+
+#-----------------------
+# Setup virtualenvwrapper
+#-----------------------
+#export PATH=/home/jim/.local/bin:$PATH
+#source /home/jim/.local/bin/virtualenvwrapper.sh
+export WORKON_HOME=~/.virtualenvs
+source /home/jim/.local/bin/virtualenvwrapper.sh
+
+
+#----------------------
+# Add ActiveTcl to path
+#----------------------
+export PATH="/opt/ActiveTcl-8.6/bin:$PATH"
 
 #-------------------------------------------------------------
 # Exit shell function

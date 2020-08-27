@@ -82,8 +82,10 @@ alias cdperl='cd ~/Documents/projects/learn-perl'
 alias cdreport='cd ~/Documents/projects/auto-completion-reports'
 alias cdprojects='cd ~/Documents/projects'
 alias cdbash='cd ~/Documents/repos/bash-dot-files'
+alias cdch='cd ~/Documents/chinese'
 
 #-------------------------------------------------------------
 # realias
 #-------------------------------------------------------------
 alias realias='$EDITOR ~/.bash_aliases; source ~/.bash_aliases'
+
