@@ -145,8 +145,7 @@ PATH=$PATH:/snap/bin
 #-----------------------
 # Setup virtualenvwrapper
 #-----------------------
-#export PATH=/home/jim/.local/bin:$PATH
-#source /home/jim/.local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=~/.virtualenvs
 source /home/jim/.local/bin/virtualenvwrapper.sh
 
