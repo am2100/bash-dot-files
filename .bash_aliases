@@ -39,7 +39,7 @@ alias ll="ls -lv --group-directories-first"
 alias lm='ll |more'        #  Pipe through 'more'
 alias lr='ll -R'           #  Recursive ls.
 alias la='ll -A'           #  Show hidden files.
-alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
+# alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 
 
 #-------------------------------------------------------------
@@ -88,4 +88,19 @@ alias cdch='cd ~/Documents/chinese'
 # realias
 #-------------------------------------------------------------
 alias realias='$EDITOR ~/.bash_aliases; source ~/.bash_aliases'
+
+#-------------------------------------------------------------
+# Obsidian
+#-------------------------------------------------------------
+alias obs='nohup Obsidian-0.8.0.AppImage & 2> /dev/null; exit;'
+
+#-------------------------------------------------------------
+# Anki
+#-------------------------------------------------------------
+alias anki='nohup ~/bin/anki-2.1.33-linux-amd64/bin/anki & 2> /dev/null; exit;'
+
+#-------------------------------------------------------------
+# Pinyin-writer
+#-------------------------------------------------------------
+alias pn='python3 ~/Documents/projects/python-projects/pinyin-writer-02/pinyinwriter.py'
 
