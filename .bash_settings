@@ -50,5 +50,6 @@ export EDITOR=vim
 
 #-------------------------------
 # Set terminal to use 256 colors
+# if tmux is not being used
 #-------------------------------
 [ -z "$TMUX" ] && export TERM=xterm-256color

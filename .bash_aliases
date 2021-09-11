@@ -104,3 +104,12 @@ alias anki='nohup ~/bin/anki-2.1.33-linux-amd64/bin/anki & 2> /dev/null; exit;'
 #-------------------------------------------------------------
 alias pn='python3 ~/Documents/projects/python-projects/pinyin-writer-02/pinyinwriter.py'
 
+#-------------------------------------------------------------
+# Bitwarden
+#-------------------------------------------------------------
+alias bitw='nohup Bitwarden-1.24.6-x86_64.AppImage & 2> /dev/null; exit;'
+
+#----------
+# IBM Cloud
+#----------
+alias ibm='ibmcloud'
